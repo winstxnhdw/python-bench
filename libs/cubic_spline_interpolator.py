@@ -1,4 +1,5 @@
 import numpy as np
+import math as m
 
 from bisect import bisect
 
@@ -134,7 +135,7 @@ class Spline2D:
         
         dx = self.sx.solve_1st_derivative(s)
         dy = self.sy.solve_1st_derivative(s)
-        yaw = np.arctan2(dy, dx)
+        yaw = m.atan2(dy, dx)
 
         return yaw
 
@@ -145,7 +146,7 @@ class Spline2D:
         dy = self.sy.solve_1st_derivative(s)
         ddy = self.sy.solve_2nd_derivative(s)
 
-        k = (ddy*dx - ddx*dy) / ((dx*dx + dy*dy)**(3/2))
+        k = (ddy*dx - ddx*dy) / ((dx*dx + dy*dy)**1.5)
 
         return k
 
