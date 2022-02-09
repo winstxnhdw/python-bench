@@ -1,6 +1,6 @@
 # python-bench
 
-Simple code optimisation benchmark for speed and accuracy.
+Simple code optimisation benchmark for speed and accuracy. Never will I write slow Python code like a noob again.
 
 ## Benchmarks
 
